@@ -13,23 +13,14 @@
             </a>
         </div>
         <a class="menu"><div class="menu-button"></div></a>
-        <a href="https://buyolympia.com/q/Item=frank-chimero-the-shape-of-design-paperback" target="_blank" class="buy">
-                listen
+        <a href="#" class="buy rotate">
+            listen
+            <audio loop src="../music/等下一场雨.mp3" id="media" autoplay="" preload=""></audio>
         </a>
     </header>
     <article>
         <main id="home">
-            <!--<div class="cover">-->
-                <!--<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/884633/cover.svg" alt="The Shape of Design cover" />-->
-            <!--</div>-->
-            <!--<blockquote>-->
-                <!--“If you create things, the book’s insights will inform the way you think about your work, regardless of how you make your living.”-->
-                <!--<br>–––<br><a href="http://www.theatlantic.com/technology/archive/2012/05/design-beyond-objects-a-guide-to-making-stuff-without-focusing-on-the-stuff/256668/">The Atlantic</a>-->
-            <!--</blockquote>-->
-            <!--<blockquote>-->
-                <!--“From the very first line, Frank grabs you by the neurons and heartstrings, and doesn’t let go until the very last.”-->
-                <!--<br>–––<br><a href="https://www.brainpickings.org/2012/04/23/the-shape-of-design-frank-chimero/">Brain Pickings</a>-->
-            <!--</blockquote>-->
+
         </main>
     </article>
     <nav class="menu-items">
@@ -39,67 +30,67 @@
                 <a href="#" style="color:#b95b23;"><span></span>Foreword</a>
             </li>
             <li>
-                <a href="/chapters/00-introduction/"><span></span>Introduction</a>
+                <a href="00-introduction/"><span></span>Introduction</a>
             </li>
             <li>
-                <a href="/chapters/01-how-and-why/"><span>Chapter One</span>How and Why</a>
+                <a href="01-how-and-why/"><span>Chapter One</span>How and Why</a>
             </li>
             <li>
-            <a href="/chapters/02-craft-and-beauty/">
+            <a href="02-craft-and-beauty/">
             <span>Chapter Two</span>
             Craft and Beauty
             </a>
             </li>
             <li>
-            <a href="/chapters/03-improvisation-and-limitations/">
+            <a href="03-improvisation-and-limitations/">
             <span>Chapter Three</span>
             Improvisation and Limitations
             </a>
             </li>
             <li>
-            <a href="/chapters/04-form-and-magic/">
+            <a href="04-form-and-magic/">
             <span>Chapter Four</span>
             Form and Magic
             </a>
             </li>
             <li>
-            <a href="/chapters/05-fiction-and-bridges/">
+            <a href="05-fiction-and-bridges/">
             <span>Chapter Five</span>
             Fiction and Bridges
             </a>
             </li>
             <li>
-            <a href="/chapters/06-context-and-response/">
+            <a href="06-context-and-response/">
             <span>Chapter Six</span>
             Context and Response
             </a>
             </li>
             <li>
-            <a href="/chapters/07-stories-and-voids/">
+            <a href="07-stories-and-voids/">
             <span>Chapter Seven</span>
             Stories and Voids
             </a>
             </li>
             <li>
-            <a href="/chapters/08-frameworks-and-etiquette/">
+            <a href="08-frameworks-and-etiquette/">
             <span>Chapter Eight</span>
             Frameworks and Etiquette
             </a>
             </li>
             <li>
-            <a href="/chapters/09-delight-and-accommodation/">
+            <a href="09-delight-and-accommodation/">
             <span>Chapter Nine</span>
             Delight and Accommodation
             </a>
             </li>
             <li>
-            <a href="/chapters/10-gifts-and-giving/">
+            <a href="10-gifts-and-giving/">
             <span>Chapter Ten</span>
             Gifts and Giving
             </a>
             </li>
             <li>
-            <a href="/chapters/11-endnotes/">
+            <a href="11-endnotes/">
             <span></span>
             Endnotes
             </a>
@@ -116,20 +107,23 @@
 </body>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
-
-    $('.buy').ready(function() {
-            $.extend({
-              show:function(){
-               alert("ready");
-              }
-            });
-        setInterval("show()",3000);
-    });
     $( document ).ready(function() {
         $( '.menu-button' ).click(function() {
             $( ".menu-button" ).toggleClass('menu-button-open');
             $( ".menu-items" ).toggleClass('menu-items-open');
         });
+
+        var x = document.getElementById("media");
+      $(function(){
+          $(".buy").click(function(){
+              $(this).toggleClass("rotate");
+              if($(this).hasClass("rotate")){
+                x.play();
+             }else{
+                 x.pause();
+            }
+         })
+     });
     });
 </script>
 </html>

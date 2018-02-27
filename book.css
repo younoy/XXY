@@ -287,7 +287,7 @@ a.buy {
     /*background-color: #b95b23;*/
     /*-webkit-animation: rotation 2s infinite linear*/
 /*}*/
-a.buy{
+a.rotate{
     -webkit-animation: rotating 2s linear infinite;
     -moz-animation: rotating 2s linear infinite;
     -o-animation: rotating 2s linear infinite;
@@ -309,6 +309,8 @@ a.buy{
          -moz-transform: rotate(360deg)
      }
  }
+
+
 
 header {
     text-align: center;
